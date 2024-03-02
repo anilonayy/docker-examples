@@ -5,7 +5,12 @@ WORKDIR /home/server
 RUN npm install -g json-server
 
 COPY db.json /home/server/db.json
+COPY alt.json /home/server/alt.json
 
 EXPOSE 3000
 
-ENTRYPOINT ["json-server", "db.json", "--host", "0.0.0.0"]
+#ENTRYPOINT ["json-server", "db.json" "--host", "0.0.0.0"]
+# we can use this to pass the db.json file as an argument to the ENTRYPOINT
+ENTRYPOINT ["json-server", "--host", "0.0.0.0"]
+
+CMD ["db.json"]

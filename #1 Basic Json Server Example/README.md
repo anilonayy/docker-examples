@@ -2,10 +2,13 @@ To run this docker file, you need to build this image first. To do that, you nee
 
 ```bash
 docker build . --no-cache 
+# docker build . --no-cache -t json-server (if you want to tag the image)
 ```
 
 ```bash
  docker run --rm -p 3000:3000 {image-id}
+ # or if we want the spesific file to run  we can add file parameter
+#docker run --rm -p 3000:3000 {image-id} alt.json
 ```
 
 So, we expect these messages to be displayed in the terminal:
@@ -26,25 +29,4 @@ Serving ./public directory if it exists
 Endpoints:
 http://0.0.0.0:3000/posts
 http://0.0.0.0:3000/profile
-```
-
-If we added the ``` EXPOSE 3000 ``` command in docker file then we go to the browser and type `http://localhost:3000/posts` we should see the following message:
-
-```json
-[
-  {
-      "id": 1,
-      "title": "Hello World",
-      "author": "John Doe",
-      "date": "2016-01-01",
-      "body": "This is the first post"
-  },
-  {
-    "id": 2,
-    "title": "Hello Again",
-    "author": "Jane Doe",
-    "date": "2016-01-02",
-    "body": "This is the second post"
-  }
-]
 ```

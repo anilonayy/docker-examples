@@ -28,7 +28,7 @@ http://0.0.0.0:3000/posts
 http://0.0.0.0:3000/profile
 ```
 
-if we go to the browser and type `http://localhost:3000/posts` we should see the following message:
+if we added the ``` EXPOSE 3000 ``` command in docker file then we go to the browser and type `http://localhost:3000/posts` we should see the following message:
 
 ```json
 [

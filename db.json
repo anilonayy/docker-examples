@@ -1,0 +1,23 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Hello World",
+      "author": "John Doe",
+      "date": "2016-01-01",
+      "body": "This is the first post"
+    },
+    {
+      "id": 2,
+      "title": "Hello Again",
+      "author": "Jane Doe",
+      "date": "2016-01-02",
+      "body": "This is the second post"
+    }
+  ],
+  "profile": {
+    "name": "John Doe",
+    "email": "email ",
+    "age": 25
+  }
+}

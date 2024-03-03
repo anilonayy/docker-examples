@@ -12,6 +12,7 @@ services:
     # This part for this container working depends on related containers, this container will wait the other containers to up.
     depends_on:
       - mysql
+      - php
   mysql:
     image: mariadb:10.5
     ports:
@@ -23,3 +24,9 @@ services:
       MYSQL_ROOT_PASSWORD: secret
     volumes:
       - ./mysql:/var/lib/mysql
+  php:
+    build:
+      context: .
+      dockerfile: php.dockerfile
+    volumes:
+      - ./src:/var/www/html

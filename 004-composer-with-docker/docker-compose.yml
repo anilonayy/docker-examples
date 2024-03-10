@@ -14,6 +14,7 @@ services:
       - mysql
       - php
   mysql:
+    container_name: '004-composer-with-docker_mysql'
     image: mariadb:10.5
     ports:
       - 3308:3308
